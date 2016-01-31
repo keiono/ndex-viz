@@ -1,0 +1,88 @@
+{
+  "name": "ndex-view",
+  "version": "0.1.0",
+  "description": "NDEx Viewer",
+  "main": "build/app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --content-base build",
+    "build": "webpack --progress --colors",
+    "clean": "rm build/app.js",
+    "lint": "eslint src/; exit 0",
+    "test": "eslint src/ && jest",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/.preprocessor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cytoscape-ci/prime.git"
+  },
+  "keywords": [
+    "Graph",
+    "Node",
+    "Edge",
+    "Network",
+    "Biology"
+  ],
+  "author": "Keiichiro Ono <kono@ucsd.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cytoscape-ci/prime/issues"
+  },
+  "homepage": "https://github.com/cytoscape-ci/prime#readme",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "env": {
+      "es6": true,
+      "browser": true
+    }
+  },
+  "babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "dependencies": {
+    "cytoscape": "^2.6.0",
+    "d3": "^3.5.14",
+    "fixed-data-table": "^0.6.0",
+    "immutable": "^3.7.6",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-tabs": "^0.5.1",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.1",
+    "redux-simple-router": "^1.0.1",
+    "redux-thunk": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.21",
+    "babel-eslint": "^4.1.6",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.3",
+    "file-loader": "^0.8.5",
+    "jest-cli": "^0.8.2",
+    "jest-webpack-alias": "^2.0.0",
+    "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.0.0",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
